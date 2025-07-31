@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MSA \ الشرطة العسكرية</title>
+
+  <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1392514610577277028/1400192710358466602/image.png">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1c1c1c, #2f2f2f);
+      color: white;
+      text-align: center;
+      padding: 50px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    img {
+      width: 120px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      pointer-events: none;
+    }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #00ffcc;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .card {
+      background-color: #222;
+      border: 2px solid #00ffcc;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 20px #00ffcc55;
+    }
+    .badge {
+      font-size: 18px;
+      background-color: #00ffcc;
+      color: #000;
+      padding: 5px 15px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    .more-section {
+      margin-top: 30px;
+      display: none;
+      animation: fadeInDown 0.5s ease;
+      text-align: right;
+      font-size: 18px;
+      line-height: 1.6;
+      white-space: pre-line;
+      background-color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #00ffcc;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    button {
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #00ffcc;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #000;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('dragstart', e => e.preventDefault());
+
+    const petitionText = `بسم الله الرحمن الرحيم
+
+السلام عليكم ورحمة الله وبركاته،
+
+نحن أعضاء فرقة MSA للشرطة العسكرية، نعلن التزامنا التام بالنظام والانضباط داخل المدينة. مهمتنا الأساسية هي حفظ الأمن، تحقيق العدالة، ومحاسبة المخالفين بكل حزم.
+
+ندعو الجميع للالتزام بالقوانين والتعاون مع قواتنا لضمان بيئة آمنة ومستقرة للجميع.
+
+والله ولي التوفيق.`;
+
+    function showMore() {
+      const moreSection = document.getElementById("moreSection");
+      moreSection.textContent = petitionText;
+      moreSection.style.display = "block";
+      moreSection.scrollIntoView({behavior: "smooth"});
+    }
+  </script>
+</head>
+<body>
+  <div class="card">
+    <img src="https://cdn.discordapp.com/attachments/1392514610577277028/1400192710358466602/image.png?ex=688c6754&is=688b15d4&hm=1a965dd7870c42b8677126f35b867b4b6ade17bde8ef45de374c73ccf6bc6755&" alt="شعار الشرطة العسكرية" />
+    <div class="badge">الشرطة العسكرية</div>
+    <h1>مرحباً بك في فرقة MSA</h1>
+    <p>نحن نهدف إلى النظام والانضباط داخل المدينة.</p>
+    <p>مهمتنا الحفاظ على الأمن ومحاسبة المخالفين.</p>
+    <p>للانضمام أو التواصل معنا، راجع الديسكورد الرسمي الخاص بنا.</p>
+
+    <button onclick="showMore()">المزيد</button>
+
+    <div class="more-section" id="moreSection"></div>
+  </div>
+</body>
+</html>
